@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Ched Chrome-key-binding tools",
+  "description": "This extension allows the user to bind their keys to run custom js script",
+  "version": "0.1",
+
+  "browser_action": {
+    // "default_icon": "icon.png",
+    // "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.baidu.com/*"],
+      "css": ["mystyle.css"],
+      "js": ["jquery.js", "key-bind.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
